@@ -4,6 +4,7 @@
   background-color: #00234B;
   border: 1px solid #555;
   border-radius: 8px;
+  z-index: 99999;
 }
 
 #lexi-inspector .selected-text {
