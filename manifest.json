@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Reading time",
-  "description": "Add the reading time to Chrome Extension documentation articles",
+  "name": "Lexi Book",
+  "description": "英語から日本語への翻訳機能と、単語の登録が出来る拡張",
   "version": "1.0",
   "action": {
     "default_popup": "popup.html",
