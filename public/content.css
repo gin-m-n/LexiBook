@@ -1,0 +1,12 @@
+#lexi-inspector {
+  position: fixed;
+  padding: 10px;
+  background-color: #00234B;
+  border: 1px solid #555;
+  border-radius: 8px;
+}
+
+#lexi-inspector .selected-text {
+  color: white
+}
+
