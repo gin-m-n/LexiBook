@@ -7,8 +7,9 @@ document.addEventListener("mouseup", async (e) => {
   const selected = window.getSelection()
   if (selected == null) return
 
-  const text = selected.toString()
-  if (text.length === 0 || text.length >= 1000) {
+  const text = selected.toString().trim()
+  console.log(text);
+  if (text.length === 0 || text.length >= 1000 || hasJapanese(text)) {
     removeInspector()
     return
   }
@@ -64,4 +65,15 @@ function createInspector(left: string, top: string, text: string) {
 
   document.body.append(container)
 }
+
+const hasJapanese = (target: string) => {
+  // ひらがな
+  if (/\p{Script=Hiragana}/u.test(target)) return true;
+  // カタカナ
+  if (/\p{Script=Katakana}/u.test(target)) return true;
+  // 漢字
+  if (/\p{Script=Han}/u.test(target)) return true;
+
+  return false;
+};
 
